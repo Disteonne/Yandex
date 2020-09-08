@@ -57,7 +57,24 @@ public class ExThree {
         System.out.println(pointTwo[1]);
 
          */
+        double integral1 = 0.0;
 
+        //уч
+            for (int j = 0; j < pointOne.length-1; j++) { //кол-во точек
+                 {
+                     integral1 = func(j + 1, arrList.get(j))-func(j,arrList.get(j));
+                }
+            }
+
+        double integral2=0.0;
+
+        for (int j = 0; j < pointTwo.length-1; j++) { //кол-во точек
+            {
+                integral2 = func(j + 1, arrList2.get(j))-func(j,arrList2.get(j));
+            }
+        }
+        double integral=Math.abs(integral1-integral2);
+        System.out.println(integral);
     }
 
     public static void addBorPoint(int numb, double[] array, String scannerLine) {
@@ -86,7 +103,12 @@ public class ExThree {
             System.out.println("error");
             return null;
         }
+
     }
+    public static double func(double x,double[] doubleArray){ //<-лучше по-отдельности массивы (отдельные интерваллы)
+    return doubleArray[0]*Math.pow(x,3)/3+doubleArray[1]*Math.pow(x,2)/2+doubleArray[2]*x;
+    }
+
 }
 
 
