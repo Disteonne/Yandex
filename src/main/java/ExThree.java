@@ -74,7 +74,8 @@ public class ExThree {
             }
         }
         double integral=Math.abs(integral1-integral2);
-        System.out.println(integral);
+        //System.out.println(integral);
+        System.out.format("%.10f",integral);
     }
 
     public static void addBorPoint(int numb, double[] array, String scannerLine) {
